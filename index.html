@@ -14,24 +14,39 @@
         <div class="row one">
             <div class="age">
                 <p class="info">Age</p>
-                <div class="data">20</div>
+                <div class="data age-value">20</div>
                 <div class="btns">
-                    <button class="subtract">-</button>
-                    <button class="add">+</button>
+                    <button class="subtract" onclick="decrement('age')">-</button>
+                    <button class="add" onclick="increment('age')">+</button>
                 </div>
             </div>
             <div class="weight">
                 <p class="info">Weight(KG)</p>
-                <div class="data">50</div>
+                <div class="data weight-value">50</div>
                 <div class="btns">
-                    <button class="subtract">-</button>
-                    <button class="add">+</button>
+                    <button class="subtract" onclick="decrement('weight')">-</button>
+                    <button class="add" onclick="increment('weight')">+</button>
                 </div>
             </div>
         </div>
         <div class="row two"></div>
         <div class="row three"></div>
     </div>
+    <script>
+        function increment(type) {
+            const data = document.querySelector(`.${type}-value`);
+            let value = parseInt(data.textContent, 10);
+            data.textContent = value + 1;
+        }
+
+        function decrement(type) {
+            const data = document.querySelector(`.${type}-value`);
+            let value = parseInt(data.textContent, 10);
+            if (value > 2) {
+                data.textContent = value - 1;
+            }
+        }
+    </script>
 </body>
 <script src="script.js"></script>
 

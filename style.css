@@ -86,4 +86,5 @@ button.add {
     cursor: pointer;
     border: none;
     outline: 0;
+    font-size: 2rem;
 }
