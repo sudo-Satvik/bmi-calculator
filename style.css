@@ -59,7 +59,7 @@ body {
     grid-template-rows: 1fr 2fr 1fr;
     text-align: center;
     padding: 1rem 3rem;
-    border-radius: 8px;
+    border-radius: 9px;
 }
 
 .btns {
