@@ -31,8 +31,12 @@
         </div>
         <div class="row two">
             <div class="info">Height (CM)</div>
-            <div class="data height-data">175</div>
-            <div class="scroller"></div>
+            <div class="data height-data" id="output">175</div>
+            <input type="range" id="scale" onchange="run(this)" progress=""0>
+            <div class="values">
+                <div class="height-range">50 cm</div>
+                <div class="height-range">300 cm</div>
+            </div>
         </div>
         <div class="row three"></div>
     </div>
@@ -49,6 +53,9 @@
             if (value > 2) {
                 data.textContent = value - 1;
             }
+        }
+        function run(run) {
+            document.getElementById('output').textContent = run.value + 50;
         }
     </script>
 </body>

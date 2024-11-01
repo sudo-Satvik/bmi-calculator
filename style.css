@@ -33,7 +33,7 @@ body {
 .text-center {
     text-align: center;
     text-transform: uppercase;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .container {
@@ -50,6 +50,16 @@ body {
 .row {
     display: flex;
     gap: 1rem;
+}
+.two{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 6px;
+    padding: 1rem 2rem;
 }
 
 .age,
@@ -88,4 +98,16 @@ button.add {
     border: none;
     outline: 0;
     font-size: 2rem;
+}
+
+#scale{
+    accent-color: var(--color);
+    width: 80%;
+}
+.values{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -12px;
+    font-size: 13px;
 }
