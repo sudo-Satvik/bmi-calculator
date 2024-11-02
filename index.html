@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <div class="text-center">BMI Calculator</div>
-    <div class="container">
-        <div class="row one">
+    <div class="containers">
+        <div class="rows one">
             <div class="age">
                 <p class="info">Age</p>
                 <div class="data age-value">20</div>
@@ -29,21 +30,45 @@
                 </div>
             </div>
         </div>
-        <div class="row two">
+        <div class="rows two">
             <div class="info">Height (CM)</div>
-            <input type="number" class="data height-data" id="output" size="2">
+            <input type="number" class="data height-data" id="output" min="50" maxlength="3" max="300" value="50">
             <input type="range" id="scale" onchange="run()" value="0" min="50" max="300">
             <div class="values">
                 <div class="height-range">50 cm</div>
                 <div class="height-range">300 cm</div>
             </div>
         </div>
-        <div class="row three">
+        <div class="rows three">
             <div class="info">Gender</div>
-
+            <div class="flex items-center justify-center w-full mb-5">
+  
+                <label for="toggleB" class="flex items-center cursor-pointer">
+                  <!-- label -->
+                  <div class="mr-3 text-gray-700 font-medium">
+                    Male
+                  </div>
+                    <!-- toggle -->
+                  <div class="relative">
+                    <!-- input -->
+                    <input type="checkbox" id="toggleB" class="sr-only">
+                    <!-- line -->
+                    <div class="block bg-[#6b63ff34] w-[100px] h-8 rounded-full"></div>
+                    <!-- dot -->
+                    <div class="dot absolute bg-[#6C63FF] left-1 top-1 w-6 h-6 rounded-full transition"></div>
+                  </div>
+                  <!-- label -->
+                  <div class="ml-3 text-gray-700 font-medium">
+                    Female
+                  </div>
+                </label>
+              
+              </div>        
+        </div>
+        <div class="rows four">
+            <button class="btn-submit">Calculate BMI</button>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         function increment(type) {
             const data = document.querySelector(`.${type}-value`);
@@ -62,9 +87,9 @@
         function run() {
             let progressValue = document.getElementById('scale');
             // console.log(progressValue.value)
-            const height = document.getElementById('output').innerText = progressValue.value;
+            const height = document.getElementById('output');
+            height.outerHTML = `<input type="number" class="data height-data" id="output" min="50" maxlength="3" max="300" value="${progressValue.value}">`;
             console.log(height);
-            
         }
     </script>
 </body>

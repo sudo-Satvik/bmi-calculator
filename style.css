@@ -12,6 +12,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+*:focus {
+    outline: none;
 }
 
 html,
@@ -30,13 +35,25 @@ body {
     align-items: center;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .text-center {
     text-align: center;
     text-transform: uppercase;
     margin: 1rem;
 }
 
-.container {
+.containers {
     min-width: 450px;
     /* background-color: red; */
     padding: 1rem 2rem;
@@ -47,11 +64,12 @@ body {
     border-radius: 6px;
 }
 
-.row {
+.rows {
     display: flex;
     gap: 1rem;
 }
-.two{
+
+.two {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -82,7 +100,7 @@ body {
 
 .data {
     font-size: 4rem;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--color);
 }
 
@@ -100,14 +118,56 @@ button.add {
     font-size: 2rem;
 }
 
-#scale{
+#scale {
     accent-color: var(--color);
     width: 80%;
 }
-.values{
+
+.values {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: -12px;
     font-size: 13px;
 }
+
+.height-data {
+    width: inherit;
+    text-align: center;
+    border: none;
+    outline: 0;
+}
+
+
+.three {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 6px;
+    padding: 1rem 2rem;
+}
+
+/* Toggle B */
+input:checked ~ .dot {
+    transform: translateX(280%);
+  } 
+.four{
+    width: 100%;
+}
+  button.btn-submit{
+    background-color: var(--color);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: var(--bg-color);
+    border-radius: 100px;
+    margin-top: 30px;
+    transition: background-color 0.2s ease;
+  }
+
+  button.btn-submit:hover{
+    background-color: #3832a5;
+  }
