@@ -33,5 +33,4 @@ This BMI Calculator is designed as a practice project to apply fundamental web d
 - Underweight: BMI < 18.5
 - Normal weight: 18.5 ≤ BMI < 24.9
 - Overweight: 25 ≤ BMI < 29.9
-- Obesity: BMI ≥ 30
 
