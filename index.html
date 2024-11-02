@@ -31,15 +31,19 @@
         </div>
         <div class="row two">
             <div class="info">Height (CM)</div>
-            <div class="data height-data" id="output">175</div>
-            <input type="range" id="scale" onchange="run(this)" progress=""0>
+            <input type="number" class="data height-data" id="output" size="2">
+            <input type="range" id="scale" onchange="run()" value="0" min="50" max="300">
             <div class="values">
                 <div class="height-range">50 cm</div>
                 <div class="height-range">300 cm</div>
             </div>
         </div>
-        <div class="row three"></div>
+        <div class="row three">
+            <div class="info">Gender</div>
+
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         function increment(type) {
             const data = document.querySelector(`.${type}-value`);
@@ -53,9 +57,14 @@
             if (value > 2) {
                 data.textContent = value - 1;
             }
+    
         }
-        function run(run) {
-            document.getElementById('output').textContent = run.value + 50;
+        function run() {
+            let progressValue = document.getElementById('scale');
+            // console.log(progressValue.value)
+            const height = document.getElementById('output').innerText = progressValue.value;
+            console.log(height);
+            
         }
     </script>
 </body>
