@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/10476/10476452.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -66,32 +67,19 @@
               </div>        
         </div>
         <div class="rows four">
-            <button class="btn-submit" onclick="location.href='result/result.html';">Calculate BMI</button>
+            <button class="btn-submit">Calculate BMI</button>
         </div>
     </div>
-    <script>
-        function increment(type) {
-            const data = document.querySelector(`.${type}-value`);
-            let value = parseInt(data.textContent, 10);
-            data.textContent = value + 1;
-        }
 
-        function decrement(type) {
-            const data = document.querySelector(`.${type}-value`);
-            let value = parseInt(data.textContent, 10);
-            if (value > 2) {
-                data.textContent = value - 1;
-            }
-    
-        }
-        function run() {
-            let progressValue = document.getElementById('scale');
-            // console.log(progressValue.value)
-            const height = document.getElementById('output');
-            height.outerHTML = `<input type="number" class="data height-data" id="output" min="50" maxlength="3" max="300" value="${progressValue.value}">`;
-            console.log(height);
-        }
-    </script>
+    <div class="containered none-d">
+        <div class="heading">BMI Results</div>
+        <div class="bmi-value">
+            <div class="b-d">22</div>
+            <div class="a-d">.54</div>
+        </div>
+        <div class="bmi-text">Normal</div>
+        <a href="../index.html">Check again</a>
+    </div>
 </body>
 <script src="script.js"></script>
 

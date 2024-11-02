@@ -171,3 +171,64 @@ input:checked ~ .dot {
   button.btn-submit:hover{
     background-color: #3832a5;
   }
+
+
+
+  .containered{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    height: 400px;
+    padding: 1rem 4rem;
+    /* gap: 0.5rem; */
+    border-radius: 8px;
+}
+
+.heading{
+    font-size: 2.4rem;
+}
+
+.bmi-value{
+    color: var(--color);
+    font-size: 3rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+.b-d{
+    font-weight: 600;
+    font-size: 7rem;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: rgb(5, 202, 5);
+}
+
+.yellow{
+    color: rgb(163, 163, 5);
+}
+.bmi-text{
+    font-size: 1.5rem;
+}
+
+a{
+    color: var(--color) !important;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+.none-d{
+    display: none;
+}
