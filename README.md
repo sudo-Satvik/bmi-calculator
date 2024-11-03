@@ -2,6 +2,8 @@
 
 A simple web-based BMI (Body Mass Index) calculator built with HTML5, CSS3, and JavaScript. This project allows users to input their weight and height to calculate their BMI and determine their health category.
 
+![image](https://github.com/user-attachments/assets/ff1908e1-870a-473c-b934-3ea51b879893)
+
 ## Project Overview
 
 This BMI Calculator is designed as a practice project to apply fundamental web development skills. It takes weight (in kilograms) and height (in meters) as inputs, calculates BMI, and displays the BMI value along with a health category (e.g., Underweight, Normal weight, Overweight, Obesity).
